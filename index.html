@@ -1,50 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Percentage</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="main">
-    <div class="center">
+      <div class="center">
         <h1>"Percentage Calculator"</h1>
-    <div class="mobile">
-   <h3>Math:</h3> 
-   <p>
-    <input type="number" id="input1" class="same" placeholder="Total marks"> <input type="number" id="input2" class="same" placeholder="Obtained marks"></p>
-    <h3>Physics:</h3> 
-   <p><input type="number" id="input3" class="same" placeholder="Total marks"> <input type="number" id="input4" class="same" placeholder="Obtained marks"></p>
-    <h3>Chemistry:</h3> 
-    <p> <input type="number" id="input5" class="same" placeholder="Total marks"> <input type="number" id="input6" class="same" placeholder="Obtained marks"></p>
-</div>
-<button onclick="submit()" class="button">Calculate</button>
-    <div id="result" ></div>
-    
-</div>
-</div>
-    
-    
-
+        <div class="mobile">
+          <h3>Math:</h3>
+          <p>
+            <input
+              type="number"
+              id="input1"
+              class="same"
+              placeholder="Total marks"
+            />
+            <input
+              type="number"
+              id="input2"
+              class="same"
+              placeholder="Obtained marks"
+            />
+          </p>
+          <h3>Physics:</h3>
+          <p>
+            <input
+              type="number"
+              id="input3"
+              class="same"
+              placeholder="Total marks"
+            />
+            <input
+              type="number"
+              id="input4"
+              class="same"
+              placeholder="Obtained marks"
+            />
+          </p>
+          <h3>Chemistry:</h3>
+          <p>
+            <input
+              type="number"
+              id="input5"
+              class="same"
+              placeholder="Total marks"
+            />
+            <input
+              type="number"
+              id="input6"
+              class="same"
+              placeholder="Obtained marks"
+            />
+          </p>
+        </div>
+        <button onclick="submit()" class="button">Calculate</button>
+        <div id="result"></div>
+      </div>
+    </div>
 
     <script>
-        function submit(){
-            let input1 = document.querySelector("#input1").value;
-            let input2 = document.querySelector("#input2").value;
-            let input3 = document.querySelector("#input3").value;
-            let input4 = document.querySelector("#input4").value;
-            let input5 = document.querySelector("#input5").value;
-            let input6 = document.querySelector("#input6").value;
+      function submit() {
+        let input1 = document.querySelector("#input1").value;
+        let input2 = document.querySelector("#input2").value;
+        let input3 = document.querySelector("#input3").value;
+        let input4 = document.querySelector("#input4").value;
+        let input5 = document.querySelector("#input5").value;
+        let input6 = document.querySelector("#input6").value;
 
-            let totalMarks = Number(input1) + Number(input3) + Number(input5);
-            let Obtmarks = Number(input2) + Number(input4) + Number(input6);
+        let totalMarks = Number(input1) + Number(input3) + Number(input5);
+        let Obtmarks = Number(input2) + Number(input4) + Number(input6);
 
-            let totalPercentage  = (Obtmarks / totalMarks) * 100;
+        let totalPercentage = (Obtmarks / totalMarks) * 100;
 
-            document.getElementById("result").innerText = totalPercentage + " %"
-
-        }
+        document.getElementById("result").innerText = totalPercentage + " %";
+      }
     </script>
-</body>
+  </body>
 </html>
